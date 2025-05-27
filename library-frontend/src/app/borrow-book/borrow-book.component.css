@@ -1,0 +1,102 @@
+/* Styling for the main heading */
+h2 {
+    color: #343a40; /* Dark grey color */
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+}
+
+/* Container for the table for better spacing and responsiveness */
+.table-container {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background for the table area */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 30px auto; /* Center the container with some top/bottom margin */
+    max-width: 90%; /* Adjust max-width as needed */
+    overflow-x: auto; /* Adds horizontal scroll on small screens for the table */
+}
+
+/* General table styling for borders and spacing */
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    border-collapse: separate; /* Allows for border-spacing if desired */
+    border-spacing: 0;
+}
+
+/* Table header (thead) styling */
+.table thead th {
+    background-color: #28a745; /* Bootstrap success green for header background */
+    color: white; /* White text for header */
+    padding: 12px 15px;
+    border-bottom: 2px solid #218838; /* Darker green border below header */
+    text-align: left;
+    font-weight: bold;
+    font-size: 1.05em;
+    white-space: nowrap; /* Prevent text wrapping in headers */
+}
+
+/* Table body (tbody) rows */
+.table tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+/* Striped rows (override Bootstrap default for more control) */
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(40, 167, 69, 0.05); /* Light green tint for odd rows */
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white for even rows */
+}
+
+/* Hover effect for rows */
+.table tbody tr:hover {
+    background-color: rgba(40, 167, 69, 0.15) !important; /* Stronger green tint on hover */
+    cursor: pointer;
+}
+
+/* Table data cells (td) styling */
+.table tbody td {
+    padding: 12px 15px;
+    border-top: 1px solid #dee2e6; /* Light grey border between rows */
+    vertical-align: middle;
+}
+
+/* Specific styling for the Actions column button */
+.table tbody td button.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    font-weight: 500;
+}
+
+.table tbody td button.btn-success:hover {
+    background-color: #218838; /* Darker green on hover */
+    border-color: #218838;
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Optional: Adjust for smaller screens */
+@media (max-width: 768px) {
+    .table-container {
+        padding: 10px;
+        margin: 15px auto;
+        max-width: 95%;
+    }
+    .table thead th,
+    .table tbody td {
+        padding: 8px 10px;
+        font-size: 0.9em;
+    }
+    .table tbody td button.btn-success {
+        padding: 6px 10px;
+        font-size: 0.85em;
+    }
+}
